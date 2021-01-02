@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+  </header>
+
+  <div class = "post-content">
+	  <table>
+	  	{% for paper in site.papers %}
+		    <tr>
+		        <td>
+		            <div class="people-name text-center">
+		                <p align="center">
+		                	{% if paper.img %}
+		                    	<img class="paper-pic" src="{{ paper.img | prepend: '/assets/img/papers/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">
+		                    {% else %}
+		                    	<img class="paper-pic" src="{{ 'default.svg' | prepend: '/assets/img/papers/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">
+		                    {% endif %}
+		                </p>
+		            </div>
+		        </td>
+		        <td align="center">
+		        	<div class="people-name text-center">
+			        	<b>{{ paper.title }}</b>
+		        	</div>
+		        </td>
+		        <td>
+		            <div class="people-name text-center">
+		            	<!-- Author list -->
+		            	{% if paper.authors %}
+		            		{{ paper.authors }}
+		            	{% endif %}
+		                <!-- Author affiliations (if provided) -->
+		                {% if paper.affil %}
+		                	<br>
+		                	{{ paper.affil }}
+		                {% endif %}
+		                <!-- Link to PDF (if provided) -->
+		                {% if paper.pdf %}
+		                	<br>
+		                	<a href="{{ paper.pdf | prepend: '/assets/pdf/papers/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">PDF</a>
+		                {% endif %}
+		            </div>
+		        </td>
+		    </tr>
+	    {% endfor %}
+	  </table>
+  </div>
+
+</article>

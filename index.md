@@ -7,6 +7,8 @@ title: Home
 layout: home
 ---
 
+**Get this Jekyll theme [here](https://github.com/krrish94/sniffle-workshop).**
+
 Hi there! Here's the lazy grad student's template for workshop webpages. I put this together to help automate mundane tasks with conventional workshop webpages - curating lists of speakers and/or organizers, schedules, and submitted/accepted papers. Here's a completely unrelated picture adapted from "Machine Learning & Artificial Intelligence" by `mikemacmarketing`; licensed under CC BY 2.0:
 
 ![](assets/img/banner.jpg)
